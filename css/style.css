@@ -1,0 +1,90 @@
+
+.logo-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    z-index: 4;
+    width: 232px;
+    height: 232px;
+    margin-top: -10px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 1rem;
+}
+.logo-text #logo-img{
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+.site-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-description p{
+    position: relative;
+    line-height: 1.2;
+}
+.site-description p:not(:last-child)::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    right: -33%;
+    top: 0;
+    z-index: 1;
+}
+.explore-section{
+    display: flex;
+    gap: 15px;
+}
+.explore-column{
+    display: inline-block;
+    width: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        0 8px 25px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+.explore-column:hover{
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 
+        0 12px 35px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.explore-title{
+    font-size: 12px;
+    text-transform: uppercase;
+}
+@media (max-width: 540px) {
+    .site-description p{
+        font-size: 18px;
+    }
+    .explore-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .explore-column{
+        width: calc(100% - 22px);
+    }
+    .explore-title{
+        font-size: 10px;
+    }
+}
+@media (max-width: 475px) {
+    .BioSite-components-Header-Header__minimal-02--CERsL .BioSite-components-Header-Header__name--ZG1qn{
+        font-size: 30px !important;
+    }
+}
